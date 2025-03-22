@@ -16,6 +16,7 @@ body {
     max-width: 800px; /* 最大幅を800pxに設定 */
     width: 90%; /* 画面幅が狭い時も対応 */
     background-color: #f8f8f8;
+    color: #333333; /* 落ち着いた文字色を設定 */
     padding: 20px;
     margin: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
