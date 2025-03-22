@@ -94,14 +94,6 @@ nav a:hover {
     color: #2c3e50; /* h2の文字色に合わせた濃い青色に変更 */
 }
 
-ul {
-    padding: 10px; /* 内側の余白を追加 */
-    margin: 0; /* 外側の余白を削除 */
-    background-color: #f4f6f7; /* 薄い背景色を設定 */
-    border-radius: 8px; /* 角を丸める */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 柔らかい影を追加 */
-}
-
 ul li {
     padding: 8px 12px; /* 内側の余白を調整 */
     margin-bottom: 6px; /* 項目間の余白を調整 */
