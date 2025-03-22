@@ -22,3 +22,18 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
+
+h2 {
+    font-size: 1.8em; /* 少し大きめのフォントサイズ */
+    color: #2c3e50; /* 落ち着いた濃い青色 */
+    border-bottom: 2px solid #3498db; /* 下線を追加 */
+    padding-bottom: 5px; /* 下線との間隔を調整 */
+    margin-bottom: 15px; /* 見出し下の余白を調整 */
+}
+
+h3 {
+    font-size: 1.5em; /* h2より少し小さめのフォントサイズ */
+    color: #34495e; /* 落ち着いた濃い灰色 */
+    margin-bottom: 10px; /* 見出し下の余白を調整 */
+    font-weight: bold; /* 太字に設定 */
+}
