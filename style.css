@@ -5,6 +5,10 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    background-image: url('images/Canaletto.jpg'); /* 背景画像を設定 */
+    background-size: cover; /* 画像を画面全体に拡大 */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
 }
 
 .container {
