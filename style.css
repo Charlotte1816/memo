@@ -68,7 +68,7 @@ nav {
 }
 
 nav .menu-toggle {
-    display: none; /* デフォルトでは非表示 */
+    display: block; /* デフォルトで表示 */
     cursor: pointer;
     font-size: 1.5em;
     background: none;
@@ -81,7 +81,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: none; /* デフォルトでは非表示 */
     flex-direction: column;
     gap: 10px;
 }
@@ -96,18 +96,18 @@ nav ul li a {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
+nav ul.active {
+    display: flex; /* メニューが開いたときに表示 */
+}
+
+@media (min-width: 769px) {
     nav .menu-toggle {
-        display: block; /* 小さい画面では表示 */
+        display: none; /* 大きい画面では非表示 */
     }
 
     nav ul {
-        display: none; /* デフォルトでは非表示 */
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav ul.active {
-        display: flex; /* メニューが開いたときに表示 */
+        display: flex; /* 大きい画面では常に表示 */
+        flex-direction: row;
+        gap: 20px;
     }
 }
