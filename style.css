@@ -55,3 +55,59 @@ hr {
     border-top: 2px solid #3498db; /* h2の下線と同じ色と太さ */
     margin: 20px 0; /* 上下の余白を調整 */
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #3498db; /* ナビゲーションの背景色 */
+    color: #ffffff; /* ナビゲーションの文字色 */
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+nav .menu-toggle {
+    display: none; /* デフォルトでは非表示 */
+    cursor: pointer;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    nav .menu-toggle {
+        display: block; /* 小さい画面では表示 */
+    }
+
+    nav ul {
+        display: none; /* デフォルトでは非表示 */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex; /* メニューが開いたときに表示 */
+    }
+}
