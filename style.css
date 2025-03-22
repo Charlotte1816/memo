@@ -94,11 +94,11 @@ nav a:hover {
     color: #2c3e50; /* h2の文字色に合わせた濃い青色に変更 */
 }
 
-ul {
+ul.content {
     list-style: decimal; /* リストを数字に変更 */
 }
 
-ul ul {
+ul.content ul.content {
     list-style: decimal; /* ネストされたリストも数字に変更 */
     list-style-type: lower-roman; /* 必要に応じて番号形式を変更可能 */
 }
