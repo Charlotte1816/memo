@@ -97,3 +97,8 @@ nav a:hover {
 ul {
     list-style: decimal; /* リストを数字に変更 */
 }
+
+ul ul {
+    list-style: decimal; /* ネストされたリストも数字に変更 */
+    list-style-type: lower-roman; /* 必要に応じて番号形式を変更可能 */
+}
