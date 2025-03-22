@@ -61,16 +61,27 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #3498db; /* ナビゲーションの背景色 */
+    background-color: #1a5276; /* 落ち着いた濃い青色 */
     color: #ffffff; /* ナビゲーションの文字色 */
-    padding: 10px 20px;
-    border-radius: 8px; /* 角を丸める */
-    text-align: center; /* 中央寄せにする */
+    padding: 10px 15px; /* 余白を調整 */
+    border-radius: 6px; /* 角を少し丸める */
     position: sticky; /* スクロールしても上部に固定 */
     top: 0; /* 上部に固定する位置 */
-    margin-top: 20px; /* 上部に余白を追加 */
+    margin: 0 auto 20px auto; /* 上下の余白を調整し中央寄せ */
     width: 100%; /* containerに合わせる */
     max-width: 800px; /* containerの最大幅に合わせる */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 少し影を追加 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 少し柔らかい影を追加 */
     z-index: 1000; /* 他の要素の上に表示 */
+}
+
+nav a {
+    color: #ffffff; /* リンクの文字色を白に設定 */
+    text-decoration: none; /* 下線を削除 */
+    margin: 0 10px; /* リンク間の余白を調整 */
+    font-weight: bold; /* 太字で強調 */
+    transition: color 0.3s ease; /* ホバー時の色変更をスムーズに */
+}
+
+nav a:hover {
+    color: #5dade2; /* ホバー時に柔らかい青色に変更 */
 }
