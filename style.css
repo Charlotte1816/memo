@@ -60,7 +60,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end; /* 右端に配置 */
+    justify-content: space-between; /* 左端と右端に配置 */
     background-color: #5dade2; /* h2と同じ柔らかい青色 */
     color: #ffffff; /* ナビゲーションの文字色 */
     padding: 4px; /* 内側の余白を狭く調整 */
