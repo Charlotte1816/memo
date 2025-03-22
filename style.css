@@ -66,28 +66,11 @@ nav {
     padding: 10px 20px;
     border-radius: 8px; /* 角を丸める */
     text-align: center; /* 中央寄せにする */
-    position: fixed; /* 固定してスクロールしても画面上部に残る */
-    top: 0;
-    left: 0;
-    width: 100%; /* 画面幅いっぱいに広げる */
-    z-index: 1000; /* 他の要素より前面に表示 */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* 常に表示 */
-    flex-direction: row;
-    gap: 20px;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
+    position: sticky; /* スクロールしても上部に固定 */
+    top: 0; /* 上部に固定する位置 */
+    margin-top: 20px; /* 上部に余白を追加 */
+    width: 100%; /* containerに合わせる */
+    max-width: 800px; /* containerの最大幅に合わせる */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 少し影を追加 */
+    z-index: 1000; /* 他の要素の上に表示 */
 }
