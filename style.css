@@ -28,7 +28,6 @@ h1 {
     color: #1a5276; /* 落ち着いた濃い青色 */
     margin-bottom: 16px; /* 見出し下の余白を調整 */
     font-weight: bold; /* 太字で強調 */
-    text-align: center; /* テキストを中央揃え */
     font-family: 'Merriweather', serif; /* 高級感のあるフォントを使用 */
 }
 
