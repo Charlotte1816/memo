@@ -93,3 +93,25 @@ nav a {
 nav a:hover {
     color: #2c3e50; /* h2の文字色に合わせた濃い青色に変更 */
 }
+
+ul {
+    padding: 10px; /* 内側の余白を追加 */
+    margin: 0; /* 外側の余白を削除 */
+    background-color: #f4f6f7; /* 薄い背景色を設定 */
+    border-radius: 8px; /* 角を丸める */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 柔らかい影を追加 */
+}
+
+ul li {
+    padding: 8px 12px; /* 内側の余白を調整 */
+    margin-bottom: 6px; /* 項目間の余白を調整 */
+    background-color: #ffffff; /* 項目の背景色を白に設定 */
+    border-radius: 4px; /* 項目の角を丸める */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* 項目に軽い影を追加 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* ホバー時のアニメーションを追加 */
+}
+
+ul li:hover {
+    transform: translateY(-2px); /* ホバー時に少し浮かせる */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* ホバー時に影を強調 */
+}
