@@ -95,23 +95,21 @@ nav a:hover {
 }
 
 ul.stylish {
-    padding: 10px; /* 内側の余白を追加 */
-    margin: 20px 0; /* 上下の余白を調整 */
-    background-color: #f8f8f8; /* 背景色を白に設定 */
-    border-radius: 8px; /* 角を丸める */
-    list-style: decimal; /* 丸ポチをなくす */
+    list-style: decimal; /* 数字のリストスタイルを設定 */
+    padding: 0; /* 内側の余白を削除 */
+    margin: 0; /* 外側の余白を削除 */
 }
 
 ul.stylish li {
-    padding: 6px 10px; /* 内側の余白を調整 */
-    margin-bottom: 1px; /* 項目間の余白を少なく調整 */
-    background-color: #f8f8f8; /* 項目の背景色を白に設定 */
-    font-family: 'Noto Sans JP', sans-serif; /* フォントを統一 */
-    font-size: 1em; /* フォントサイズを調整 */
-    color: #333333; /* 文字色を落ち着いた色に設定 */
-    transition: color 0.3s ease; /* ホバー時の色変更をスムーズに */
+    padding: 0; /* 内側の余白を削除 */
+    margin: 0; /* 項目間の余白を削除 */
+    background-color: transparent; /* 背景色を透明に設定 */
+    font-family: inherit; /* フォントを継承 */
+    font-size: inherit; /* フォントサイズを継承 */
+    color: inherit; /* 文字色を継承 */
+    transition: none; /* トランジションを削除 */
 }
 
 ul.stylish li:hover {
-    color: #1a5276; /* ホバー時に文字色を濃い青色に変更 */
+    color: inherit; /* ホバー時の文字色を継承 */
 }
