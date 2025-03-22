@@ -93,23 +93,3 @@ nav a {
 nav a:hover {
     color: #2c3e50; /* h2の文字色に合わせた濃い青色に変更 */
 }
-
-ul.stylish {
-    list-style: decimal; /* 数字のリストスタイルを設定 */
-    padding: 0; /* 内側の余白を削除 */
-    margin: 0; /* 外側の余白を削除 */
-}
-
-ul.stylish li {
-    padding: 0; /* 内側の余白を削除 */
-    margin: 0; /* 項目間の余白を削除 */
-    background-color: transparent; /* 背景色を透明に設定 */
-    font-family: inherit; /* フォントを継承 */
-    font-size: inherit; /* フォントサイズを継承 */
-    color: inherit; /* 文字色を継承 */
-    transition: none; /* トランジションを削除 */
-}
-
-ul.stylish li:hover {
-    color: inherit; /* ホバー時の文字色を継承 */
-}
