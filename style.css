@@ -24,22 +24,22 @@ body {
 }
 
 h2 {
-    font-size: 1.8em; /* 少し大きめのフォントサイズ */
+    font-size: 1.6em; /* 少し控えめなフォントサイズ */
     color: #2c3e50; /* 落ち着いた濃い青色 */
-    padding: 10px; /* 内側の余白を調整 */
-    margin-bottom: 15px; /* 見出し下の余白を調整 */
-    background-color: #3498db; /* 背景色を青に設定 */
+    padding: 8px; /* 内側の余白を調整 */
+    margin-bottom: 12px; /* 見出し下の余白を調整 */
+    background-color: #5dade2; /* 少し柔らかい青色に変更 */
     color: #ffffff; /* 文字色を白に設定 */
     border-radius: 4px; /* 角を少し丸める */
 }
 
 h3 {
-    font-size: 1.5em; /* h2より少し小さめのフォントサイズ */
+    font-size: 1.3em; /* h2よりさらに控えめなフォントサイズ */
     color: #34495e; /* 落ち着いた濃い灰色 */
-    padding: 8px; /* 内側の余白を調整 */
-    margin-bottom: 10px; /* 見出し下の余白を調整 */
-    border-left: 5px solid #3498db; /* 左端に青い線を追加 */
-    background-color: #ecf0f1; /* 背景色を薄い灰色に設定 */
+    padding: 6px; /* 内側の余白を調整 */
+    margin-bottom: 8px; /* 見出し下の余白を調整 */
+    border-left: 4px solid #5dade2; /* 左端の線を少し細くして柔らかい青色に変更 */
+    background-color: #f4f6f7; /* 背景色をさらに薄い灰色に設定 */
 }
 
 hr {
