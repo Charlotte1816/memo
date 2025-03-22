@@ -61,14 +61,14 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #1a5276; /* 落ち着いた濃い青色 */
+    background-color: #5dade2; /* h2と同じ柔らかい青色 */
     color: #ffffff; /* ナビゲーションの文字色 */
-    padding: 10px 15px; /* 余白を調整 */
-    border-radius: 6px; /* 角を少し丸める */
+    padding: 8px; /* h2と同じ内側の余白 */
+    border-radius: 4px; /* h2と同じ角丸 */
     position: sticky; /* スクロールしても上部に固定 */
     top: 0; /* 上部に固定する位置 */
     margin: 0 auto 20px auto; /* 上下の余白を調整し中央寄せ */
-    width: 100%; /* containerに合わせる */
+    width: 90%; /* h2の幅に合わせる */
     max-width: 800px; /* containerの最大幅に合わせる */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 少し柔らかい影を追加 */
     z-index: 1000; /* 他の要素の上に表示 */
@@ -83,5 +83,5 @@ nav a {
 }
 
 nav a:hover {
-    color: #5dade2; /* ホバー時に柔らかい青色に変更 */
+    color: #2c3e50; /* h2の文字色に合わせた濃い青色に変更 */
 }
