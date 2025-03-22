@@ -68,7 +68,7 @@ nav {
     position: sticky; /* スクロールしても上部に固定 */
     top: 10px; /* 上部に固定する位置 */
     margin: 0 0 20px auto; /* 上下の余白を調整し右寄せ */
-    width: 100%; /* 文字幅に合わせる */
+    width: auto; /* 文字幅に合わせる */
     max-width: none; /* 最大幅の制限を解除 */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 少し柔らかい影を追加 */
     z-index: 1000; /* 他の要素の上に表示 */
