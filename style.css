@@ -103,12 +103,15 @@ ul.stylish {
 }
 
 ul.stylish li {
-    padding: 8px 12px; /* 内側の余白を調整 */
-    margin-bottom: 8px; /* 項目間の余白を調整 */
+    padding: 6px 10px; /* 内側の余白を調整 */
+    margin-bottom: 4px; /* 項目間の余白を少なく調整 */
     background-color: #f8f8f8; /* 項目の背景色を白に設定 */
-    transition: transform 0.2s ease; /* ホバー時のアニメーションを追加 */
+    font-family: 'Noto Sans JP', sans-serif; /* フォントを統一 */
+    font-size: 1em; /* フォントサイズを調整 */
+    color: #333333; /* 文字色を落ち着いた色に設定 */
+    transition: color 0.3s ease; /* ホバー時の色変更をスムーズに */
 }
 
 ul.stylish li:hover {
-    transform: translateY(-2px); /* ホバー時に少し浮かせる */
+    color: #1a5276; /* ホバー時に文字色を濃い青色に変更 */
 }
