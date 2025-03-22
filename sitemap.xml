@@ -8,15 +8,41 @@
 
 
 <url>
-  <loc>https://charlotte1816.github.io/memo/index.html</loc>
-  <lastmod>2025-03-16T12:56:44+00:00</lastmod>
+  <loc>https://charlotte1816.github.io/memo/</loc>
+  <lastmod>2025-03-22T07:52:11+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://charlotte1816.github.io/memo/geometry.html</loc>
-  <lastmod>2025-03-16T12:56:44+00:00</lastmod>
+  <loc>https://charlotte1816.github.io/memo/general_relativity.html</loc>
+  <lastmod>2025-03-22T07:52:11+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://charlotte1816.github.io/memo/geometry.html</loc>
+  <lastmod>2025-03-22T07:52:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://charlotte1816.github.io/memo/mozart.html</loc>
+  <lastmod>2025-03-22T07:52:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://charlotte1816.github.io/memo/maugham.html</loc>
+  <lastmod>2025-03-22T07:52:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://charlotte1816.github.io/memo/links.html</loc>
+  <lastmod>2025-03-22T07:52:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://charlotte1816.github.io/memo/index.html</loc>
+  <lastmod>2025-03-22T07:52:11+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
+</urlset>
 </urlset>
