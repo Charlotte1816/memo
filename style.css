@@ -58,32 +58,28 @@ hr {
 
 nav {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     background-color: #3498db; /* ナビゲーションの背景色 */
     color: #ffffff; /* ナビゲーションの文字色 */
-    padding: 10px;
-    border-radius: 8px;
-    position: relative;
-}
-
-nav .menu-toggle {
-    display: block; /* デフォルトで表示 */
-    cursor: pointer;
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    color: #ffffff;
-    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 8px; /* 角を丸める */
+    text-align: center; /* 中央寄せにする */
+    position: fixed; /* 固定してスクロールしても画面上部に残る */
+    top: 0;
+    left: 0;
+    width: 100%; /* 画面幅いっぱいに広げる */
+    z-index: 1000; /* 他の要素より前面に表示 */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; /* デフォルトでは非表示 */
-    flex-direction: column;
-    gap: 10px;
+    display: flex; /* 常に表示 */
+    flex-direction: row;
+    gap: 20px;
 }
 
 nav ul li {
@@ -94,20 +90,4 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-}
-
-nav ul.active {
-    display: flex; /* メニューが開いたときに表示 */
-}
-
-@media (min-width: 769px) {
-    nav .menu-toggle {
-        display: none; /* 大きい画面では非表示 */
-    }
-
-    nav ul {
-        display: flex; /* 大きい画面では常に表示 */
-        flex-direction: row;
-        gap: 20px;
-    }
 }
