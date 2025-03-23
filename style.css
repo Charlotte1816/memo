@@ -102,3 +102,11 @@ a {
 a:hover {
     color: #1e5f3a; /* ホバー時の色も濃い緑色に変更 */
 }
+
+ul li {
+    margin-bottom: 1em; /* 項目間の余白を1文字分程度に設定 */
+}
+
+ul li:last-child {
+    margin-bottom: 0; /* 最後の項目の余白を削除 */
+}
