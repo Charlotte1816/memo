@@ -104,9 +104,14 @@ a:hover {
 }
 
 ul li {
-    margin-bottom: 1em; /* 項目間の余白を1文字分程度に設定 */
+    margin-bottom: 0.5em; /* 項目間の余白を1文字分程度に設定 */
 }
 
 ul li:last-child {
     margin-bottom: 0; /* 最後の項目の余白を削除 */
+}
+
+ul ul {
+    margin-top: 0.5em; /* ネストされたリストの上部に余白を追加 */
+    margin-bottom: 0.5em; /* ネストされたリストの下部に余白を追加 */
 }
