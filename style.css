@@ -93,3 +93,12 @@ nav a {
 nav a:hover {
     color: #2c3e50; /* h2の文字色に合わせた濃い青色に変更 */
 }
+
+a {
+    color: #2e8b57; /* 濃い目の緑色に変更 */
+    text-decoration: none; /* 下線を削除 */
+}
+
+a:hover {
+    color: #1e5f3a; /* ホバー時の色も濃い緑色に変更 */
+}
