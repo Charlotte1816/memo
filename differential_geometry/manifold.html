@@ -80,64 +80,12 @@
                     <li>$X=\{a, b, c\}$とし，$\mathcal{T}=\{\emptyset, \{a\}, \{b, c\}, X\}$とする．このとき$(X, \mathcal{T})$は位相空間とならない．なぜなら，条件2に反する．例えば，$\{a\} \cup \{b, c\} = X$だが，$X \notin \mathcal{T}$である．</li>
                 </ul>
             </div>
-            <h3>連結性</h3>
-            <p>位相空間の性質の一つとして，連結性がある．連結性は，位相空間が「一つの塊」であるかどうかを表す性質である．</p>
-            <div class="definition">
-                <div class="definition-title">定義</div>
-                位相空間$X$が<b>連結（connected）</b>であるとは，$X$が空でない2つの開集合$U$と$V$で分割されないことをいう．すなわち，$U$と$V$が以下の条件を満たすとき，$X$は連結である：
-                <ol>
-                    <li>$U \cap V = \emptyset$である．</li>
-                    <li>$U \cup V = X$である．</li>
-                    <li>$U$と$V$が共に空でない．</li>
-                </ol>
-            </div>
-            <div class="example">
-                <div class="example-title">例</div>
-                連結な位相空間の例として，以下のようなものがある：
-                <ul>
-                    <li>通常の位相$\mathbb{R}$は連結である．</li>
-                </ul>
-                連結でない位相空間の例として，以下のようなものがある：
-                <ul>
-                    <li>位相空間$X=\mathbb{R}^2$とし，$\mathcal{T}=\{\emptyset, X, \{(x,y) \in X \mid x>0\}, \{(x,y) \in X \mid x<0\}\}$とする．このとき$(X, \mathcal{T})$は連結でない．理由は，$X$が2つの開集合$\{(x,y) \in X \mid x>0\}$と$\{(x,y) \in X \mid x<0\}$に分割されるためである．これらの開集合は互いに交わらず，その和集合が$X$全体を覆う．</li>
-                </ul>
-            </div>
-            <h3>コンパクト性</h3>
-            <p>位相空間の性質の一つとして，コンパクト性がある．コンパクト性は，位相空間が「有限個の開集合で覆える」性質である．</p>
-            <div class="definition">
-                <div class="definition-title">定義</div>
-                位相空間$X$が<b>コンパクト（compact）</b>であるとは，$X$の任意の開被覆$\{U_\alpha\}$に対して，その中から有限個の開集合を選んで$X$を覆うことができることをいう．
-            </div>
-            <div class="example">
-                <div class="example-title">例</div>
-                コンパクトな位相空間の例として，以下のようなものがある：
-                <ul>
-                    <li>有限集合は離散位相においてコンパクトである．</li>
-                    <li>通常の位相$\mathbb{R}$において，閉区間$[a,b]$はコンパクトである．</li>
-                </ul>
-                コンパクトでない位相空間の例として，以下のようなものがある：
-                <ul>
-                    <li>位相空間$X=\mathbb{R}$とし，$\mathcal{T}=\{\emptyset, X, \{x \in X \mid x>0\}\}$とする．このとき$(X, \mathcal{T})$はコンパクトでない．理由は，開被覆$\{\{x \in X \mid x>0\}\}$に対して，有限個の開集合を選んでも$X$を覆うことができないためである．</li>
-                </ul>
-            </div>
             <h3>Hausdorff性</h3>
             <p>位相空間の性質の一つとして，Hausdorff性がある．Hausdorff性は，位相空間が「点と点を分離できる」性質である．</p>
             <div class="definition">
                 <div class="definition-title">定義</div>
                 位相空間$X$が<b>Hausdorff空間（Hausdorff space）</b>であるとは，$X$の任意の2点$x, y \in X$に対して，それらを分離する開集合$U, V \in \mathcal{T}$が存在することをいう．
             </div>
-            <div class="example">
-                <div class="example-title">例</div>
-                Hausdorff空間の例として，以下のようなものがある：
-                <ul>
-                    <li>通常の位相$\mathbb{R}$はHausdorff空間である．</li>
-                </ul>
-                Hausdorff空間でない位相空間の例として，以下のようなものがある：
-                <ul>
-                    <li>位相空間$X=\mathbb{R}$とし，$\mathcal{T}=\{\emptyset, X, \{x \in X \mid x>0\}\}$とする．このとき$(X, \mathcal{T})$はHausdorff空間でない．理由は，$x=0$と$x>0$を分離する開集合が存在しないためである．</li>
-                </ul>
-            </div>
-            <p>これらの性質は、空間の幾何学的および解析的な性質を理解し、応用するための基本的な枠組みを提供する</p>
             <h3>連続写像</h3>
             <p>2つ以上の位相空間が与えられたとき，それらの間の写像を考えることができる．これらの写像の連続性は次のように定義される：</p>
             <div class="definition">
@@ -145,17 +93,6 @@
                 <p>位相空間$(X, \mathcal{T}_X)$と$(Y, \mathcal{T}_Y)$が与えられたとき，写像$f: X \to Y$が<b>連続（continuous）</b>であるとは，任意の$Y$の開集合$\mathcal{O}_Y \in \mathcal{T}_Y$に対して，その逆像$f^{-1}(\mathcal{O}_Y)$が$X$の開集合$\mathcal{T}_X$に含まれることをいう．</p>
             </div>
             <p>写像が連続であることは，空間の構造を保ちながら情報を伝えることを意味する．例えば，連続写像は「近い点が近いままで写される」性質を持つ．</p>
-            <div class="example">
-                <div class="example-title">例</div>
-                連続な写像の非自明な例として，以下のようなものがある：
-                <ul>
-                    <li>位相空間$X=\mathbb{R}$とし，通常の位相$\mathcal{T}=\{(a,b) \mid a, b \in \mathbb{R}, a < b\}$を考える．写像$f: X \to X$を$f(x) = x^2$とする．この写像は連続である．例えば，開区間$(c,d)$の逆像は$f^{-1}((c,d)) = \{x \in \mathbb{R} \mid c < x^2 < d\}$であり，これは$\mathbb{R}$の通常の位相において開集合である．</li>
-                </ul>
-                連続でない写像の例として，以下のようなものがある：
-                <ul>
-                    <li>位相空間$X=\{a, b, c\}$とし，位相$\mathcal{T}=\{\emptyset, \{a\}, \{a, b\}, X\}$を考える．写像$f: X \to X$を$f(a) = b, f(b) = c, f(c) = a$とする．この写像は連続<b>ではない</b>．理由は，例えば$\{a\}$の逆像$f^{-1}(\{a\}) = \{c\}$が$\mathcal{T}$の開集合に含まれないためである．</li>
-                </ul>
-            </div>
             <h3>同相写像</h3>
             <p>位相空間から位相空間への連続写像の中で，特に次のものが（位相）幾何学において重要である：</p>
             <div class="definition">
@@ -169,22 +106,6 @@
                 <p>このとき，位相空間$(X, \mathcal{T}_X)$と$(Y, \mathcal{T}_Y)$は<b>同相（homeomorphic）</b>であるという．</p>
             </div>
             <p>同相写像は，位相空間の間の「同じ形」を保つ写像である．同相写像が存在する2つの位相空間は，位相的には区別できない．</p>
-            <div class="example">
-                <div class="example-title">例</div>
-                同相写像の例として，以下のようなものがある：
-                <ul>
-                    <li>立方体と球は連続である：$\mathbb{S}^2=\{x\in\R^3\mid |x|=1\}$を単位球とし，$C=\{(x,y,z) \mid \mathrm{max}(x,y,z)=1\}$を立方体とする．写像$\varphi:C\to\mathbb{S}^2$を
-                        $$
-                        \varphi(x,y,z)=\left(\frac{x}{\sqrt{x^2+y^2+z^2}},\frac{y}{\sqrt{x^2+y^2+z^2}},\frac{z}{\sqrt{x^2+y^2+z^2}}\right)
-                        $$
-                    と定義する．この写像は$C$上の各点を球面に投影する．$\varphi$は全単射であり，逆写像は
-                        $$
-                        \varphi^{-1}(x,y,z)=\left(\frac{x}{\mathrm{max}(|x|,|y|,|z|)},\frac{y}{\mathrm{max}(|x|,|y|,|z|)},\frac{z}{\mathrm{max}(|x|,|y|,|z|)}\right)
-                        $$
-                    である．$\varphi,\varphi^{-1}$はともに連続である．したがって$\varphi$は同相写像である．</li>
-                    </li>
-                </ul>
-            </div>
             <hr>
             <h2 id="differentiable_mfd">可微分多様体</h2>
             <p>可微分多様体は，位相空間に微分可能な構造を導入したものである．微分可能性は，局所的には実数値関数の微分可能性を要請する．</p>
