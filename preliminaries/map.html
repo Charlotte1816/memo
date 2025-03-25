@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="物理学のための数学的準備に関する覚書．">
+        <meta name="keywords" content="覚書, 物理学, 数学, 写像">
+        <meta name="author" content="Charlotte">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <title>写像</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="/stained_glass.png">
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <style>
+            .MathJax {
+                margin: 0 0.2em;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div class="container" id="top">
+            <div style="text-align: right;">
+                <img src="/logo.png" style="height: 5em;">
+            </div>
+            <h1>写像</h1>
+            <p>更新日: <script>document.write(new Date(document.lastModified).toLocaleDateString('ja-JP'));</script></p>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                </ul>
+                <ul>
+                    <li><a href="preliminaries.html">数学的準備</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#top">TOP</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <h2>概要</h2>
+            <p>写像は数学における基本的な概念であり，集合の要素間の対応関係を表す．これは関数や変換の一般化として捉えることができ，解析学や代数学，幾何学など多くの分野で基本的な役割を果たす．</p>
+            <hr>
+            <h2>目次</h2>
+            <ul>
+                <li><a href="#definition">定義</a></li>
+                <li><a href="#equivalence">同値関係と同値類</a></li>
+            </ul>
+            <hr>
+            <h2 id="definition">定義</h2>
+            <p>写像とは，集合$X$から集合$Y$への対応関係のことである．集合$X$の元$x$に対して，集合$Y$の元$y$がただ一つ対忋するとき，$X$から$Y$への写像$f$は，$x$を$y$に写すといい，$f: X \to Y$と書く．</p>
+            <hr>
+            <h2 id="equivalence">同値関係と同値類</h2>
+            <p>集合$X$上の同値関係$\sim$は，$X$の任意の元$x, y \in X$に対して，$x \sim y$が成り立つとき，$x$と$y$は同値であるといい，同値関係と呼ばれる．同値関係によって$X$を分割した部分集合を同値類といい，$[x]$で表す．</p>
+        </div>
+    </body>
+</html>
