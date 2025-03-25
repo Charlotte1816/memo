@@ -165,7 +165,3 @@ ul ul {
     margin-bottom: 8px; /* タイトル下の余白ｓｓを調整 */
     font-size: 1.2em; /* 少し大きめのフォントサイズ */
 }
-
-mjx-container.inline {
-    margin: 0 0.2em; /* インライン数式の前後に余白を追加 */
-}
