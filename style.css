@@ -162,6 +162,10 @@ ul ul {
 .example-title {
     font-weight: bold; /* 太字で強調 */
     color: #1e8449; /* 落ち着いた濃い緑色 */
-    margin-bottom: 8px; /* タイトル下の余白を調整 */
+    margin-bottom: 8px; /* タイトル下の余白ｓｓを調整 */
     font-size: 1.2em; /* 少し大きめのフォントサイズ */
+}
+
+mjx-container.inline {
+    margin: 0 0.2em; /* インライン数式の前後に余白を追加 */
 }
