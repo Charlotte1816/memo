@@ -308,7 +308,14 @@
                 $a\sim a$なので$[a]\neq\emptyset$である．また$[a]\cap[b]\neq\emptyset$ならば$[a]=[b]$である．
                 <div class="proof">
                     <div class="proof-title">証明</div>
-                    $x\in[a]$とすると，$x\sim a$である．$x\in[a]\cap[b]$だから，$x\sim b$であるため，$x\in[b]$である．したがって，$[a]\subset[b]$である．同様にして$[b]\subset[a]$である．したがって，$[a]=[b]$である．
+                    <ul>
+                        <li>
+                            ある$x\in[a]\cap[b]$が存在する．したがって，$x\sim a$かつ$x\sim b$が成り立つ．同値関係の対称律より，$a\sim x$が成り立つ．また，推移律より$a\sim b$が成り立つ．
+                        </li>
+                        <li>
+                            $x\in[a]$とすると，$x\sim a$である．推移律より，$x\sim b$であるため，$x\in[b]$である．したがって，$[a]\subset[b]$である．同様にして$[b]\subset[a]$である．したがって，$[a]=[b]$である．
+                        </li>
+                    </ul>
                 </div>
             </p>
             <p>
