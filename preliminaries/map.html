@@ -169,6 +169,108 @@
                     </li>
                 </ul>
             </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                写像$c:X\to Y$を$c(x)=y_0$とする．このとき，$c$を<b>定値写像（constant map）</b>と呼ぶ．
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                写像$f:X\to Y$の定義域を$A\subset X$に<b>制限（restriction）</b>した写像を$f|_A:A\to Y$と書く．
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                写像$f:X\to Y$と写像$g:Y\to Z$に対して，$g\circ f:X\to Z$を$g\circ f:x\mapsto g(f(x))$で定義される写像とする．このとき，$g\circ f$を$g$と$f$の<b>合成写像（composite map）</b>と呼ぶ．
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                集合の間の写像の合成写像が，その合成の仕方に依らないとき，写像の図式は<b>可換（commutative）</b>であるという．
+                \require{AMScd}
+                \begin{CD}
+                    X @>f>> Y @>g>> Z \\
+                    @. @| @| \\
+                    @. Y @>g\circ f>> Z
+                \end{CD}
+            </div>
+            <div class="example">
+                <div class="example-title">例</div>
+                写像$f:\mathbb{R}\to\mathbb{R}$を$f:x\mapsto x^2$，写像$g:\mathbb{R}\to\mathbb{R}$を$g:x\mapsto e^x$とする．このとき，$g\circ f:\mathbb{R}\to\mathbb{R}$は$g\circ f:x\mapsto e^{x^2}$であり，$f\circ g:\mathbb{R}\to\mathbb{R}$は$f\circ g:x\mapsto (e^x)^2$である．
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                集合$A$を集合$X$の部分集合とする．写像$i:A\to X$を任意の$a\in A$に対して$i:a\mapsto a$と定義される写像とする．この写像$i$を<b>包含写像（inclusion map）</b>と呼ぶ．包含写像は$i\hookrightarrow X$と書く場合がある．
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                包含写像$i:X\to X$を<b>恒等写像（identity map）</b>と呼び，$\mathrm{id}_X:X\to X$と書く．
+            </div>
+            <p>写像$f:X\to Y$が全単射である場合，<b>逆写像</b>$f^{-1}:Y\yo X$が$f^{-1}:f(x)\mapsto x$と定義でき，$f^{-1}$も全単射になる．そして明らかに$f\circ f^{-1}=\mathrm{id}_Y$，$f^{-1}\circ f=\mathrm{id}_X$が成り立つ．</p>
+            <p>逆に$f\circ g=\mathrm{id}_X$，$g\circ f=\mathrm{id}_Y$が成り立つとき，写像$f,g$は全単射である．</p>
+            <div class="proof">
+                <div class="proof-title">証明</div>
+                $g\circ f=\mathrm{id}_X$ならば$f$は単射であり，$g$は全射であることを示す：
+                <ul>
+                    <li>$f$が単射であることを示す．任意の$x, x' \in X$に対して，$f(x) = f(x')$と仮定する．このとき，$g(f(x)) = g(f(x'))$が成り立つ．$g\circ f = \mathrm{id}_X$より，$g(f(x)) = x$および$g(f(x')) = x'$が成り立つ．したがって，$x = x'$となり，$f$は単射である．</li>
+                    <li>$g$が全射であることを示す．任意の$x \in X$に対して，$g(f(x)) = \mathrm{id}_X(x) = x$が成り立つ．したがって，$x = g(f(x))$となる$f(x) \in Y$が存在するため，$g$は全射である．</li>
+                </ul>
+                同様にして，$f\circ g=\mathrm{id}_Y$ならば$f$は全射であり，$g$は単射であることも示せる．
+            </div>
+            <div class="example">
+                <div class="example-title">例</div>
+                <ul>
+                    <li>$f:\mathbb{R}\to(0,\infty)$を$f:x\mapsto e^x$とする．このとき$f$は全単射であり，逆写像$f^{-1}:(0,\infty)\to\mathbb{R}$は$f:x\mapsto\ln{x}$である．</li>
+                    <li>
+                        $g:(-\pi/2,\pi/2)\to(-1,1)$を$g:x\mapsto\sin{x}$とする．このとき$g$は全単射であり，逆写像$g^{-1}:(-1,1)\to(-\pi/2,\pi/2)$は$g:x\mapsto\arcsin{x}$である．
+                    </li>
+                </ul>
+            </div>
+            <div class="example">
+                <div class="example-title">例</div>\require{bm}
+                $n$次元Euclid群$E^n$は$n$次元並進$a:\bm{x}\mapsto \bm{x}+\bm{a}\,(\bm{x},\bm{a}\in\mathbb{R}^n)$と$\mathrm{O}(n)$回転$R:\bm{x}\mapsto R\bm{x}\,(R\in\mathrm{O}(n))$から構成される．このとき，$E^n$の元は$a$と$R$の組$(R,a):\bm{x}\mapsto R\bm{x}+\bm{a}$で表される．
+                <ul>
+                    <li>
+                        $a:\bm{x}\mapsto \bm{x}+\bm{a}$は全単射である．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$a$が単射であることを示す．$a\bm{x}=a\bm{x}'$とすると，$\bm{x}=\bm{x}'$が成り立つ．</li>
+                                <li>$a$が全射であることを示す．任意の$\bm{y}\in\mathbb{R}^n$に対して，$a\bm{x}=\bm{y}$となる$\bm{x}\in\mathbb{R}^n$が存在する．実際，$\bm{x}=\bm{y}-\bm{a}$が定義できるため$a\bm{x}=\bm{y}$が成り立つ．</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        $R:\bm{x}\mapsto R\bm{x}$は全単射である．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$R$が単射であることを示す．$R\bm{x}=R\bm{x}'$とすると，$\bm{x}=\bm{x}'$が成り立つ．</li>
+                                <li>$R$が全射であることを示す．任意の$\bm{y}\in\mathbb{R}^n$に対して，$R\bm{x}=\bm{y}$となる$\bm{x}\in\mathbb{R}^n$が存在する．実際，$\bm{x}=R^{-1}\bm{y}$が定義できるため$R\bm{x}=\bm{y}$が成り立つ．</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        $E^n$の元$(R,a)$は全単射である．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$(R,a)$が単射であることを示す．$(R,a)\bm{x}=(R,a)\bm{x}'$とすると，$R\bm{x}+\bm{a}=R\bm{x}'+\bm{a}$より$\bm{x}=\bm{x}'$が成り立つ．</li>
+                                <li>$(R,a)$が全射であることを示す．任意の$\bm{y}\in\mathbb{R}^n$に対して，$(R,a)\bm{x}=\bm{y}$となる$\bm{x}\in\mathbb{R}^n$が存在する．実際，$\bm{x}=R^{-1}(\bm{y}-\bm{a})$が定義できるため$(R,a)\bm{x}=\bm{y}$が成り立つ．</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                ある代数的構造（積や和など）が集合$X,Y$に与えられたとする．写像$f:X\to Y$がこの構造を保つとき，$f$を<b>準同型写像（homomorphism）</b>と呼ぶ．
+            </div>
+            <div class="example">
+                <div class="example-title">例</div>
+                集合$X,Y$に積が与えられたとする．写像$f:X\to Y$が$f(ab)=f(a)f(b)$を満たすとき，$f$は準同型写像である．ここで$ab$は集合$X$の積であり，$f(a)f(b)$は集合$Y$の積である．これらの積は一般に異なるものである．
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                準同型写像$f:X\to Y$が全単射であるとき，$f$を<b>同型写像（isomorphism）</b>と呼ぶ．またこのとき，集合$X,Y$は<b>同型（isomorphic）</b>であるといい，$X\cong Y$あるいは$x\cong y$と書く．
+            </div>
             <hr>
             <h2 id="equivalence">同値関係と同値類</h2>
             <p>集合$X$上の同値関係$\sim$は，$X$の任意の元$x, y \in X$に対して，$x \sim y$が成り立つとき，$x$と$y$は同値であるといい，同値関係と呼ばれる．同値関係によって$X$を分割した部分集合を同値類といい，$[x]$で表す．</p>
