@@ -55,7 +55,61 @@
             </ul>
             <hr>
             <h2 id="definition">定義</h2>
-            <p>写像とは，集合$X$から集合$Y$への対応関係のことである．集合$X$の元$x$に対して，集合$Y$の元$y$がただ一つ対忋するとき，$X$から$Y$への写像$f$は，$x$を$y$に写すといい，$f: X \to Y$と書く．</p>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                $X,Y$を集合とする．各$x\in X$に$y\in Y$を割り当てる規則を<b>写像（map）</b>と呼び，$f:X\to Y$と書く．より明示的には$f:x\mapsto f(x)$と表す．
+            </div>
+            <p>同じ$y\in Y$に割り当てられている$X$の元は一般に1つだけとは限らない．</p>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                写像$f:X\to Y$に対して，ある$y\in Y$に写される$X$の元全体の集合$\{x\in X \mid f(x)=y\}$を<b>$y$の逆像（inverse image）</b>と呼び，$f^{-1}(y)$と書く．
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                写像$f:X\to Y$に対して，$X$を<b>定義域（domain）</b>，$Y$を<b>値域（codomain）</b>と呼ぶ．
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                写像$f:X\to Y$によって写される$X$の元全体の集合$\{y\in Y\mid y=f(x), x\in X\}$を<b>像（image）</b>と呼び，$f(X)$あるいは$\mathrm{im}f$と書く．
+            </div>
+            <p>次の例のように，写像$f$について考えるとき，定義域と値域は重要な役割を果たす．</p>
+            <div class="example">
+                <div class="example-title">例</div>
+                <ul>
+                    <li>$f(x)=e^x$を考える．もし定義域と値域がともに$\mathbb{R}$ならば，$f(x)=-1$は逆像をもたない．一方で，定義域と値域がともに$\mathbb{C}$ならば，$-1$の逆像として$f^{-1}=\{(2n+1)\pi i\mid n\in\mathbb{Z}\}$がある．</li>
+                    <li>$f(x)=\sin{x}$を考える．もし定義域と値域がともに$\mathbb{R}$ならば，$f$の像は$[-1,1]$となる．一方で$\mathbb{C}$ならば，$f$の像は$\mathbb{C}$となる（このとき$\sin{z}\coloneqq (e^{iz}-e^{-iz})/2i$であることに注意）．</li>
+                </ul>
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                <ul>
+                    <li>写像$f:X\to Y$が<b>単射（injective）</b>であるとは，$X$の異なる2つの元$x\neq x'$に対して$f(x)\neq f(x')$となることである．</li>
+                    <li>写像$f:X\to Y$が<b>全射（surjective）</b>であるとは，全ての$y\in Y$に対してある$x\in X$が存在し$f(x)=y$が成り立つことである．</li>
+                    <li>写像$f:X\to Y$が<b>全単射（bijective）</b>であるとは，$f$が単射かつ全射であることである．</li>
+                </ul>
+            </div>
+            <div class="image-gallery"></div>
+                <div style="display: flex; justify-content: space-around; margin-bottom: 1em;">
+                    <figure>
+                        <img src="map1.png" style="width: 200px; height: auto;">
+                        <figcaption>全射だが単射でない</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="map2.png" style="width: 200px; height: auto;">
+                        <figcaption>単射だが全射でない</figcaption>
+                    </figure>
+                </div>
+                <div style="display: flex; justify-content: space-around;">
+                    <figure>
+                        <img src="map3.png" style="width: 200px; height: auto;">
+                        <figcaption>全単射である</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="map4.png" style="width: 200px; height: auto;">
+                        <figcaption>単射でも全射でもない</figcaption>
+                    </figure>
+                </div>
+            </div>
             <hr>
             <h2 id="equivalence">同値関係と同値類</h2>
             <p>集合$X$上の同値関係$\sim$は，$X$の任意の元$x, y \in X$に対して，$x \sim y$が成り立つとき，$x$と$y$は同値であるといい，同値関係と呼ばれる．同値関係によって$X$を分割した部分集合を同値類といい，$[x]$で表す．</p>
