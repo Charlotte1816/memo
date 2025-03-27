@@ -365,6 +365,52 @@
             <p>
                 上の例のように，「点の近さ」の概念は位相幾何学において重要である．
             </p>
+            <div class="example">
+                <div class="example-title">例</div>
+                <ul>
+                    <li>
+                        集合$X$を四角形$\{(x,y)\in\mathbb{R}^2\mid |x|\leq1,|y|\leq1\}$とする．$(-1,y)\sim(1,y)$とすると，円柱を得る．一方で，$(-1,-y)\sim(1,y)$とすると，<b>メビウスの帯</b>を得る．
+                        <figure style="text-align: center;">
+                            <img src="moebius.png" style="width: 100%;">
+                            <figcaption>メビウスの帯（Ref.<a href="https://commons.wikimedia.org/wiki/File:M%C3%B6biusband.png">Wiki</a>）</figcaption>
+                        </figure>
+                        メビウスの帯は，表裏がなく<b>向き付け不可能（non-orientable）</b>であるといわれる．一方で円柱は<b>向き付け可能（orientable）</b>である．
+                    </li>
+                    <li>
+                        $(x_1,y_1),(x_2,y_2)\in\mathbb{R}^2$とする．$x_2=x_1+2\pi n_x$または$y_2=y_1+2\pi n_y$となるとき，$(x_1,y_1)\sim(x_2,y_2)$とすると，<b>トーラス</b>$\mathbb{T}^2$を得る．
+                        <figure style="text-align: center;">
+                            <img src="torus.png" style="width: 100%;">
+                            <figcaption>トーラス$\mathbb{T}^2$（Ref.<a href="https://commons.wikimedia.org/wiki/File:Torus.png">Wiki</a>）</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        長方形の辺同士を同一視することで得られるその他の図形として，<b>Kleinの壺</b>や<b>射影平面（projective plane）</b>がある．
+                        <figure style="text-align: center;">
+                            <img src="klein.png" style="width: 100%;">
+                            <figcaption>Kleinの壺（Ref.<a href="https://commons.wikimedia.org/wiki/File:KleinBottle-01.png">Wiki</a>）</figcaption>
+                        </figure>
+                        これらの図形は$\mathbb{R}$内では自己交差することなしでは作ることは出来ない．またこれらは向き付け不可能である．
+                        <p>
+                            射影平面$\mathbb{RP}^2$は次のようにしても得られる：単位ベクトル$\boldsymbol{n}$と$-\boldsymbol{n}$を同一視する．
+                            <figure style="text-align: center;">
+                                <img src="projective.png" style="width: 100%;">
+                                <figcaption>射影平面$\mathbb{RP}^2$（Ref.<a href="https://commons.wikimedia.org/wiki/File:Sphere_symmetry_group_ci.png">Wiki</a>）</figcaption>
+                            </figure>
+                            ベクトル$\boldsymbol{n}$を表すために$S^2$上の点$(\theta,\phi)$を用いることが出来る．しかし上の同一視によって2つの対蹠点$\boldsymbol{n}=(\theta,\phi)$と$-\boldsymbol{n}=(\theta+\pi,-\phi)$が同一視されるため，$\mathbb{S}^2/\sim$は北半球とみなせる．ただし普通の意味での北半球ではない．赤道上の対蹠点も同一視されるため，この「半球」は球になる．
+                        </p>
+                    </li>
+                    <li>
+                        次のように八角形の辺同士を同一視することで得られる図形を考える：
+
+                        このようにして2つの「ハンドル」が付いたトーラス$\Sigma_2$が得られる．同様にして$g$個の「ハンドル」が付いたトーラス$\Sigma_g$が得られる．この「ハンドル」の数は<b>種数（genus）</b>と呼ばれている．
+                    </li>
+                    <li>
+                        閉円板$D^2=\{(x,y)\in\mathbb{R}^2\mid x^2+y^2\leq1\}$を考える．境界$\{(x,y)\in\mathbb{R}^2\mid x^2+y^2=1\}$上の点を同一視，すなわち$x_1^2+y_1^2=x_2^2+y_2^2=1$となるとき$(x_1,y_1)\sim(x_2,y_2)$とする．このとき，$D^2/\sim$は球面$\mathbb{S}^2$とみなせる．
+
+                        同様にして$D_n/\mathbb{S}^{n-1}$は$\mathbb{S}^n$とみなすことができる．
+                    </li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>
