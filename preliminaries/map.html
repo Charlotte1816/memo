@@ -186,9 +186,9 @@
                 集合の間の写像の合成写像が，その合成の仕方に依らないとき，写像の図式は<b>可換（commutative）</b>であるという．
                 \require{AMScd}
                 \begin{CD}
-                    X @>f>> Y @>g>> Z \\
-                    @. @| @| \\
-                    @. Y @>g\circ f>> Z
+                    A @>f>> B \\
+                    @VgVV @VVhV \\
+                    C @>>k> D
                 \end{CD}
             </div>
             <div class="example">
@@ -203,7 +203,7 @@
                 <div class="definition-title">定義</div>
                 包含写像$i:X\to X$を<b>恒等写像（identity map）</b>と呼び，$\mathrm{id}_X:X\to X$と書く．
             </div>
-            <p>写像$f:X\to Y$が全単射である場合，<b>逆写像</b>$f^{-1}:Y\yo X$が$f^{-1}:f(x)\mapsto x$と定義でき，$f^{-1}$も全単射になる．そして明らかに$f\circ f^{-1}=\mathrm{id}_Y$，$f^{-1}\circ f=\mathrm{id}_X$が成り立つ．</p>
+            <p>写像$f:X\to Y$が全単射である場合，<b>逆写像</b>$f^{-1}:Y\to X$が$f^{-1}:f(x)\mapsto x$と定義でき，$f^{-1}$も全単射になる．そして明らかに$f\circ f^{-1}=\mathrm{id}_Y$，$f^{-1}\circ f=\mathrm{id}_X$が成り立つ．</p>
             <p>逆に$f\circ g=\mathrm{id}_X$，$g\circ f=\mathrm{id}_Y$が成り立つとき，写像$f,g$は全単射である．</p>
             <div class="proof">
                 <div class="proof-title">証明</div>
@@ -224,8 +224,8 @@
                 </ul>
             </div>
             <div class="example">
-                <div class="example-title">例</div>\require{bm}
-                $n$次元Euclid群$E^n$は$n$次元並進$a:\bm{x}\mapsto \bm{x}+\bm{a}\,(\bm{x},\bm{a}\in\mathbb{R}^n)$と$\mathrm{O}(n)$回転$R:\bm{x}\mapsto R\bm{x}\,(R\in\mathrm{O}(n))$から構成される．このとき，$E^n$の元は$a$と$R$の組$(R,a):\bm{x}\mapsto R\bm{x}+\bm{a}$で表される．
+                <div class="example-title">例</div>
+                $n$次元Euclid群$E^n$は$n$次元並進$\require{bm}a:\bm{x}\mapsto \bm{x}+\bm{a}\,(\bm{x},\bm{a}\in\mathbb{R}^n)$と$\mathrm{O}(n)$回転$R:\bm{x}\mapsto R\bm{x}\,(R\in\mathrm{O}(n))$から構成される．このとき，$E^n$の元は$a$と$R$の組$(R,a):\bm{x}\mapsto R\bm{x}+\bm{a}$で表される．
                 <ul>
                     <li>
                         $a:\bm{x}\mapsto \bm{x}+\bm{a}$は全単射である．
