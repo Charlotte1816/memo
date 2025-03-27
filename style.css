@@ -166,11 +166,11 @@ ul ul {
     font-size: 1.2em; /* 少し大きめのフォントサイズ */
 }
 
-img {
-    max-width: 100%; /* 画像の幅をコンテナの幅に収める */
-    height: auto; /* アスペクト比を維持 */
-    display: block; /* 余計な隙間を防ぐためにブロック要素に設定 */
-}
+/* img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+} */
 
 .proof {
     border-left: 6px solid #000000; /* 左側に黒色の線を追加 */
