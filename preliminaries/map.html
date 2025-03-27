@@ -113,7 +113,60 @@
             <div class="example">
                 <div class="example-title">例</div>
                 <ul>
-                    <li>写像$f:\mathbb{R}\to\mathbb{R}$（f:$x\mapsto ax$）</li>
+                    <li>写像$f:\mathbb{R}\to\mathbb{R}$を$f:x\mapsto ax\,(a\in\mathbb{R}-\{0\})$とする．このとき$f$は全単射である．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$f$が単射であることを示す．$f(x)=f(x')$とすると，$ax=ax'$より$x=x'$が成り立つ．</li>
+                                <li>$f$が全射であることを示す．任意の$y\in\mathbb{R}$に対して，$f(x)=y$となる$x\in\mathbb{R}$が存在する．実際，$x=y/a$とすれば$f(x)=y$が成り立つ．</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>写像$f:\mathbb{R}\to\mathbb{R}$を$f:x\mapsto x^2$とする．このとき$f$は単射でも全射でもない．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$f$が単射でないことを示す．$f(-1)=f(1)=1$であるため，$f$は単射でない．</li>
+                                <li>$f$が全射でないことを示す．$f(x)=y$となる$x\in\mathbb{R}$が存在しない$y<0$が存在する．</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>写像$f:\mathbb{R}\to\mathbb{R}$を$f:x\mapsto e^x$とする．このとき$f$は単射だが全射でない．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$f$が単射であることを示す．$f(x)=f(x')$とすると，$e^x=e^{x'}$より$x=x'$が成り立つ．</li>
+                                <li>$f$が全射でないことを示す．$f(x)=y$となる$x\in\mathbb{R}$が存在しない$y<0$が存在する．</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>写像$f:\mathbb{R}\to\mathbb{R}$を$f:x\mapsto \sin{x}$とする．このとき$f$は単射でも全射でもない．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$f$が単射でないことを示す．$f(0)=f(2\pi)=0$であるため，$f$は単射でない．</li>
+                                <li>$f$が全射でないことを示す．$f(x)=y$となる$x\in\mathbb{R}$が存在しない$y\notin[-1,1]$が存在する．</li>
+                            </ul>
+                        </div>
+                        しかし，定義域を$$[-\pi/2,\pi/2]$$とし，値域を$$[-1,1]$$とすると，$f$は全単射となる．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$f$が単射であることを示す．$f(x)=f(x')$とすると，$\sin{x}=\sin{x'}$より$x=x'$が成り立つ．</li>
+                                <li>$f$が全射であることを示す．任意の$y\in[-1,1]$に対して，$f(x)=y$となる$x\in[-\pi/2,\pi/2]$が存在する．実際，$x=\arcsin{y}$が定義でき$f(x)=y$が成り立つ．</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>正則（$\det M\neq0$）な$n\times n$行列全体の集合を$\mathrm{GL}(n,\mathbb{R})$とし，$\mathrm{GL}(n,\mathbb{R}\supset)M:\mathbb{R}^n\to\mathbb{R}^n$を$M:\bm{x}\mapsto M\bm{x}$とする．このとき$M$は全単射である．
+                        <div class="proof">
+                            <div class="proof-title">証明</div>
+                            <ul>
+                                <li>$M$が単射であることを示す．$M\bm{x}=M\bm{x}'$とすると，$M(\bm{x}-\bm{x}')=\bm{0}$である．$\det M\neq0$より$\bm{x}=\bm{x}'$が成り立つ．</li>
+                                <li>$M$が全射であることを示す．任意の$\bm{y}\in\mathbb{R}^n$に対して，$M\bm{x}=\bm{y}$となる$\bm{x}\in\mathbb{R}^n$が存在する．実際，$M^{-1}\bm{y}$が定義できるため$M(M^{-1}\bm{y})=\bm{y}$が成り立つ．</li>
+                            </ul>
+                        </div>
+                        この証明からも分かるように，もし$\det M=0$ならば，$M$は単射でも全射でもない．
+                    </li>
                 </ul>
             </div>
             <hr>
