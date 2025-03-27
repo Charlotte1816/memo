@@ -165,3 +165,9 @@ ul ul {
     margin-bottom: 8px; /* タイトル下の余白ｓｓを調整 */
     font-size: 1.2em; /* 少し大きめのフォントサイズ */
 }
+
+img {
+    max-width: 100%; /* 画像の幅をコンテナの幅に収める */
+    height: auto; /* アスペクト比を維持 */
+    display: block; /* 余計な隙間を防ぐためにブロック要素に設定 */
+}
