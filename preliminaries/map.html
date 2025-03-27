@@ -272,7 +272,63 @@
             </div>
             <hr>
             <h2 id="equivalence">同値関係と同値類</h2>
-            <p>集合$X$上の同値関係$\sim$は，$X$の任意の元$x, y \in X$に対して，$x \sim y$が成り立つとき，$x$と$y$は同値であるといい，同値関係と呼ばれる．同値関係によって$X$を分割した部分集合を同値類といい，$[x]$で表す．</p>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                集合$X$上の<b>関係（relation）</b>とは，$X^2$の部分集合$R$である．$(a,b)\in X^2$が$R$に含まれるとき，$aRb$と書く．
+            </div>
+            <div class="example">
+                <div class="example-title">例</div>
+                関係$>$は$\mathbb{R}^2$の部分集合であり，$(a,b)\in >$のとき$a>b$と書く．
+            </div>
+            <div class="definition">
+                集合$X$上の関係$R$が次の3つの性質を満たすとき，$R$は<b>同値関係（equivalence relation）</b>であるといい，$R$を$\sim$で表す．
+                <ol>
+                    <li>反射律（reflexive）：任意の$a\in X$に対して$a\sim a$が成り立つ．</li>
+                    <li>対称律（symmetric）：任意の$a,b\in X$に対して$a\sim b$ならば$b\sim a$が成り立つ．</li>
+                    <li>推移律（transitive）：任意の$a,b,c\in X$に対して$a\sim b$かつ$b\sim c$ならば$a\sim c$が成り立つ．</li>
+                </ol>
+            </div>
+            <div class="example">
+                <div class="example-title">例</div>
+                整数を2で割ると，余りは0か1である．整数$n,m$が同じ余りを持つとき，$m\sim n$とすると，$\sim$は同値関係である．
+                <div class="proof">
+                    <div class="proof-title">証明</div>
+                    <ul>
+                        <li>反射律：任意の整数$n$に対して，$n$は自分自身と同じ余りを持つため，$n \sim n$が成り立つ．</li>
+                        <li>対称律：$n \sim m$ならば，$n$と$m$は同じ余りを持つ．このとき，$m$と$n$も同じ余りを持つため，$m \sim n$が成り立つ．</li>
+                        <li>推移律：$n \sim m$かつ$m \sim k$ならば，$n$と$m$，$m$と$k$がそれぞれ同じ余りを持つ．したがって，$n$と$k$も同じ余りを持つため，$n \sim k$が成り立つ．</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                集合$X$とその上の同値関係$\sim$が与えられたとき，$X$の「素集合（mutually disjoint）」への分割を<b>同値類（equivalence class）</b>と呼ぶ．類$[a]$は$x\sim a$となる$x$全体の集合である；$[a]=\{x\in X\mid x\sim a\}$．  
+            </div>
+            <p>
+                $a\sim a$なので$[a]\neq\emptyset$である．また$[a]\cap[b]\neq\emptyset$ならば$[a]=[b]$である．
+                <div class="proof">
+                    <div class="proof-title">証明</div>
+                    <ul>
+                        $x\in[a]$とすると，$x\sim a$である．$x\in[a]\cap[b]$だから，$x\sim b$であるため，$x\in[b]$である．したがって，$[a]\subset[b]$である．同様にして$[b]\subset[a]$である．
+                    </ul>
+                </div>
+            </p>
+            <p>
+                したがって，$[a],[b]$は，$[a]=[b]$か$[a]\cap[b]=\emptyset$のどちらかを満たす．このようにして，$X$は同値関係$\sim$によって「互いに素」な同値類に分割される．
+            </p>
+            <div class="definition">
+                <div class="definition-title">定義</div>
+                集合$X$とその上の同値関係$\sim$が与えられたとき，$X$の同値類全体の集合を<b>商空間（quotient space）</b>と呼び，$X/\sim$と書く．また元$a$（または$[a]$の任意の元）を類$[a]$の<b>代表元（representative）</b>と呼ぶ．
+            </div>
+            <div class="example">
+                <div class="example-title">例</div>
+                整数を2で割ると，余りは0か1である．整数$n$の同値類は$n$が0か1であるかによって分けられる：
+                <ul>
+                    <li>類$[0]=\{\cdots,-4,-2,0,2,4,\cdots\}$．代表元としては例えば$0$を選べる．</li>
+                    <li>類$[1]=\{\cdots,-3,-1,1,3,5,\cdots\}$．代表元としては例えば$1$を選べる．</li>
+                </ul>
+                このとき，$\mathbb{Z}/\sim=\{[0],[1]\}$である．これは位数2の<b>巡回群（cyclic group）</b>$\mathbb{Z}_2$に同型である．$\mathbb{Z}_2$は代数的には$0,1$の2つの元からなる群であり，$0+0=0,0+1=1,1+0=1,1+1=0$である．一般に$\mathbb{Z}$を$n$で割ったときの余りで同値類を考えると，商空間は$\mathbb{Z}/n\mathbb{Z}=\{[0],[1],\cdots,[n-1]\}$であり，これは位数$n$の巡回群$\mathbb{Z}_n$に同型である．
+            </div>
         </div>
     </body>
 </html>
