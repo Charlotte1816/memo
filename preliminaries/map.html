@@ -334,7 +334,36 @@
                 </ul>
                 このとき，$\mathbb{Z}/\sim=\{[0],[1]\}$である．これは位数2の<b>巡回群（cyclic group）</b>$\mathbb{Z}_2$に同型である．$\mathbb{Z}_2$は代数的には$0,1$の2つの元からなる群であり，$0+0=0$，$0+1=1$，$1+0=1$，$1+1=0$である．一般に$\mathbb{Z}$を$n$で割ったときの余りで同値類を考えると，商空間は$\mathbb{Z}/n\mathbb{Z}=\{[0],[1],\cdots,[n-1]\}$であり，これは位数$n$の巡回群$\mathbb{Z}_n$に同型である．
             </div>
-            <p>$X$を何らかの「空間」とする．次の例に示すように商空間は幾何学的表すことが出来る．</p>
+            <p>次の例に示すように商空間は幾何学的表すことが出来る．</p>
+            <div class="example">
+                <div class="example-title">例</div>
+                $x,y$を実数とする．$y=x+2\pi n\,(n\in\mathbb{Z})$となるとき，$x\sim y$とすると，$\sim$は同値関係である．
+                <div class="proof">
+                    <div class="proof-title">証明</div>
+                    <ul>
+                        <li>反射律：$x=x+2\pi\cdot0$より$x\sim x$が成り立つ．</li>
+                        <li>対称律：$x\sim y$ならば$y=x+2\pi n$となる．したがって，$x=y+2\pi(-n)$となり$y\sim x$が成り立つ．</li>
+                        <li>推移律：$x\sim y$かつ$y\sim z$ならば，$x=y+2\pi n$かつ$y=z+2\pi m$となる．したがって，$x=z+2\pi(n+m)$となり$x\sim z$が成り立つ．</li>
+                    </ul>
+                </div>
+                類$[x]$は$\{x+2\pi n\mid n\in\mathbb{Z}\}$であり，代表元は例えば$x\in[0,2\pi)$である．次の点が重要である：
+                <ul>
+                    <li>
+                        $x$と$x+2\pi$は$\mathbb{R}$では異なる点だが，商空間$\mathbb{R}/\sim$では同じ点とみなせる．
+                    </li>
+                    <li>
+                        点$\epsiron$は$2\pi-\epsiron$に無限小$\epsiron$だけ近いが$\mathbb{R}$ではそうではない．
+                    </li>
+                </ul>
+                したがって，商空間$\mathbb{R}/\sim$は円周$S^1=\{e^{i\theta}\mid\theta\in[0,2\pi)\}$とみなすことができる．
+                <figure style="text-align: center;">
+                    <img src="circle.png" style="width: 90%;">
+                    <figcaption>商空間$\mathbb{R}/\sim$としての円周$S^1$</figcaption>
+                </figure>
+            </div>
+            <p>
+                上の例のように，「点の近さ」の概念は位相幾何学において重要である．
+            </p>
         </div>
     </body>
 </html>
