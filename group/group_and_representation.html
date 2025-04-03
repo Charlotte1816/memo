@@ -57,8 +57,34 @@
             </ul>
             <hr>
             <h2>群とは何か</h2>
+            <p>
+                群とは，ある集合に対して，その集合の元同士を結びつける演算が定義されているものをいう．
+            </p>
+            <div class="dbox">
+                <div class="dbox_title">定義</div>
+                集合$G$とその上の二項演算$\mu:G\times G\to G$の組$(G,\mu)$が<b>群</b>であるとは，以下の条件を満たすことである：
+                <ol>
+                    <li>結合律：$\forall g,h,k\in G.\,\mu(g,\mu(h,k))=\mu(\mu(g,h),k)$</li>
+                    <li>単位元の存在：$\exists e\in G.\,\forall g\in G.\,\mu(g,e)=\mu(e,g)=g$</li>
+                    <li>逆元の存在：$\forall g\in G.\,\exists x\in G.\,\mu(g,x)=\mu(x,g)=g$</li>
+                </ol>
+            </div>
+            <p>
+                普通は二項演算$\mu(g,h)$を$g\cdot h$あるいはもっと簡単に$gh$と書く．また逆元は$g^{-1}$と書く．$\underbrace{gg\cdots g}_{n}$は$g^n$と書く．
+            </p>
             <hr>
             <h2>群の表現</h2>
+            <p>
+                群の表現とは，群の元を行列に写像することである．
+            </p>
+            <div class="dbox">
+                <div class="dbox_title">定義</div>
+                群$G$の（ベクトル空間$V$上の）<b>表現</b>とは，$G$の元$g$をベクトル空間$V$上の（可逆な）線形演算子$D(g):V\to V$に写す写像$D:G\to \mathrm{GL}(V)$で次の性質を満たすもののことをいう：
+                <ol>
+                    <li>単位元：$D(e)=1$</li>
+                    <li>準同型：$D(g_1)D(g_2)=D(g_1g_2)$</li>
+                </ol>
+            </div>
         </div>
     </body>
 </html>

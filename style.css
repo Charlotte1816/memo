@@ -166,11 +166,24 @@ ul ul {
     font-size: 1.2em; /* 少し大きめのフォントサイズ */
 }
 
-/* img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-} */
+/*  */
+
+.dbox {
+    background-color: #f0f0f0;
+    padding: 16px;
+    margin: 16px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+.dbox-title {
+    font-weight: bold; /* 太字で強調 */
+    color: #000000; /* 落ち着いた濃い黒色 */
+    margin-bottom: 8px; /* タイトル下の余白を調整 */
+    font-size: 1.2em; /* 少し大きめのフォントサイズ */
+}
+
+/*  */
 
 .proof {
     border-left: 6px solid #000000; /* 左側に黒色の線を追加 */
