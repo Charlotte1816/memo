@@ -162,7 +162,7 @@ ul ul {
 /* Collapsible box for the proof of the theorem */
 details.collapsible {
     background-color: #f9f9f9;
-    border: 4px solid #000000;
+    border: 1px solid #000000;
     padding: 12px;
     margin: 16px 0;
     border-radius: 4px;
