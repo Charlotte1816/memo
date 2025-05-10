@@ -198,17 +198,19 @@
             <div class="dbox">
                 <div class="dbox-title">例</div>
                 巡回群$\mathbb{Z}_3$に対して，写像$D:\mathbb{Z}_3\to\mathrm{GL}(\mathbb{C})$を次のように定義する：
-                \begin{equation}
-                    D(e)=1,\quad D(a)=e^{2\pi i/3},\quad D(b)=e^{4\pi i/3}
-                \end{equation}
+                \begin{align}
+                    D(e)&=1,\quad D(a)=e^{2\pi i/3},
+                    \\
+                    D(b)&=e^{4\pi i/3}
+                \end{align}
                 このとき，$D$は，群の表現となる．
             </div>
             <details class="collapsible">
                 <summary>証明</summary>
                 任意の元$g_1,g_2\in\mathbb{Z}_3$に対し，$D(g_1g_2)=D(g_1)D(g_2)$が成り立つことを示す：
                 \begin{align}
-                    D(eg) &= D(g) = D(e)D(g),\quad (\forall g\in G)\\
-                    D(ge) &= D(g) = D(g)D(e),\quad (\forall g\in G)\\
+                    D(eg) &= D(g) = D(e)D(g),\\
+                    D(ge) &= D(g) = D(g)D(e),\\
                     D(aa) &= D(b) = e^{4\pi i/3} 
                     \\&= e^{2\pi i/3}e^{2\pi i/3}=D(a)D(a)\\
                     D(ab) &= D(e) = 1 
