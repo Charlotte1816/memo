@@ -62,16 +62,95 @@
             </p>
             <div class="dbox">
                 <div class="dbox-title">定義</div>
-                集合$G$とその上の二項演算$\mu:G\times G\to G$の組$(G,\mu)$が<b>群（group）</b>であるとは，以下の条件を満たすことである：
+                <b>群（Group）</b>$G$とは，その任意の順序対$(g_1,g_2)$に対し，次の性質を満たす第3の元（$g_1g_2$と表す）を割り当てる規則を持った集合である：
                 <ol>
-                    <li>結合律：任意の$g,h,k\in G$に対して$\mu(g,\mu(h,k))=\mu(\mu(g,h),k)$が成り立つ．</li>
-                    <li>単位元の存在：ある$e\in G$存在して，任意の$g\in G$に対して$\mu(g,e)=\mu(e,g)=g$が成り立つ．</li>
-                    <li>逆元の存在：任意の$g\in G$に対して，ある$g^{-1}\in G$が存在して$\mu(g,g^{-1})=\mu(g^{-1},g)=e$が成り立つ．</li>
+                    <li>任意の$f,g\in G$に対し，$fg\in G$となる．（閉性）</li>
+                    <li>任意の$f,g,h\in G$に対し，$(fg)h=f(gh)$となる．（結合律）</li>
+                    <li>ある単位元$e\in G$が存在し，任意の$f\in G$に対し，$ef=fe=f$となる．（単位元の存在）</li>
+                    <li>任意の$f\in G$に対し，ある逆元$f^{-1}\in G$が存在し，$ff^{-1}=f^{-1}f=e$となる．（逆元の存在）</li>
                 </ol>
             </div>
             <p>
-                通常は群$(G,\mu)$を$G$と書き，二項演算$\mu(g,h)$を$g\cdot h$あるいはもっと簡単に$gh$と書く．
+                群は任意の$g_1,g_2\in G$に対して$g_1g_2$を指定する掛け算の表とみなすことができる．特に群の元が離散的な場合，次の表のような形に書くことができる．このような表を<b>群表</b>と呼ぶ．
             </p>
+            <div class="img-frame">
+                <img src="/group/figures/group_table.png">
+            </div>
+            <div class="dbox">
+                <div class="dbox-title">定義</div>
+                群が有限個の元から成る場合，群は<b>有限（finite）</b>と呼び，そうでない場合は<b>無限（infinite）</b>と呼ぶ．有限群$G$の元の個数を$G$の<b>位数（order）</b>と呼び，$|G|$と書く．
+            </div>
+            <p>ここでは簡単のため有限群の場合のみを考えることにする．</p>
+            <div class="dbox">
+                <div class="dbox-title">例</div>
+                集合$G=\{e,a,b\}$に対して，次の群表のように掛け算を定義する：
+                <div class="img-frame">
+                    <img src="/group/figures/Z3_table.png">
+                </div>
+                このとき，$G$は群である．この群は位数$3$の<b>巡回群（cyclic group）</b>$\Z_3$である．一般に巡回群$\Z_n$とは，1つの元から生成される群のことである．すなわち，その群のどの元もある元（生成元という）の$n$までの冪乗で表されるということである．たとえば，$\Z_3$の元は次のように表される：
+                \begin{align}
+                    a &= a^1 \\
+                    b &= a^2 \\
+                    e &= a^3
+                \end{align}
+            </div>
+            <details class="collapsible">
+                <summary>$Z_3$が群であることの証明</summary>
+                群の定義の条件を確認する：
+                <ol>
+                    <li>$G$の元は$e,a,b$の3つであり，掛け算の結果も$e,a,b$のいずれかであるため，閉性が満たされる．</li>
+                    <li>単位元$e$を除く非自明な場合について
+                        \begin{align}
+                            (aa)b&=bb=a=ae=a(ab) \\
+                            (ab)a&=ea=a=ae=a(ba) \\
+                            (ba)a&=ea=a=bb=b(aa) \\
+                            (bb)a&=aa=b=be=b(ba) \\
+                            (ba)b&=eb=b=be=b(ab) \\
+                            (ab)b&=eb=b=aa=a(bb) \\
+                        \end{align}
+                        が成り立つ．よって結合律が満たされる．
+                    </li>
+                    <li>単位元は$e$であり，任意の元に対して$eg=ge=g$が成り立つ．</li>
+                    <li>逆元は各元に対し次のように与えられる：
+                        \begin{align}
+                            e^{-1} &= e \\
+                            a^{-1} &= b \\
+                            b^{-1} &= a \\
+                        \end{align}
+                    </li>
+                </ol>
+                よって群の定義の条件を満たすので，$G$は群である．∎
+            </details>
+            <p>
+                上の例の$\Z_3$の群表を見ると，各行・各列に各元がちょうど1回ずつ表れている．このことは一般の有限群においても成り立つ．
+            </p>
+            <div class="dbox">
+                <div class="dbox-title">定理（組み換え定理）</div>
+                位数$r$の有限群$G=\{g_1,g_2,\ldots,g_r\}$が与えられたとする．$G$の任意の元$g$を各元に右から掛けて得られる集合
+                \begin{equation}\label{eq:permutation_thm}
+                    \{g_1g,g_2g,\ldots,g_rg\}
+                \end{equation}
+                には，$G$の各元がちょうど1回ずつ現れる（左から掛けても同様に成り立つ）．
+            </div>
+            <details class="collapsible">
+                <summary>証明</summary>
+                $g_ig=g_jg$となる相異なる$g_i,g_j$が存在するとする．両辺に右から$g^{-1}$を掛けると$g_i=g_j$となる．これは仮定$g_i=g_j$に反する．よって式\eqref{eq:permutation_thm}の各元は異なる．また，各元が異なるので式\eqref{eq:permutation_thm}は$G$の元を全て含むことがわかる．したがって式\eqref{eq:permutation_thm}には$G$の各元がちょうど1回ずつ現れることがわかる（左から掛けた場合も同様）．∎
+            </details>
+            <p>
+                群の中でもいくらか扱いやすい特別な場合がある：
+            </p>
+            <div class="dbox">
+                <div class="dbox-title">定義</div>
+                <b>Abel群（Abelian group）</b>とは，掛け算則が可換な群である．すなわち任意の元$g_1,g_2\in G$に対し，
+                \begin{equation}
+                    g_1g_2=g_2g_1
+                \end{equation}
+                が成り立つ群である．Abel群は<b>可換群</b>とも呼ばれる．
+            </div>
+            <div class="dbox">
+                <div class="dbox-title">例</div>
+                $\Z_3$はAbel群である．これは群表を対角線で折り返したときに対称になることからもわかる．
+            </div>
             <hr>
             <h2>群の表現</h2>
             <p>
