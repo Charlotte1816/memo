@@ -144,6 +144,29 @@
                 <div class="dbox-title">定理</div>
                 有限群の任意の表現は完全可約である．
             </div>
+            <details class="collapsible">
+                <summary>証明</summary>
+                先の定理より，ユニタリー表現が完全可約であることを示せば十分である．また表現が既約な場合，既にブロック対角な形にあるため完全可約である．したがってユニタリー表現が可約な場合について完全可約であることを示せば十分である．ユニタリー表現$D$が可約ならば，ある不変部分空間が存在し，その不変部分空間への射影演算子$P$が存在し任意の$g\in G$に対し
+                \[
+                    PD(g)P=D(g)P
+                \]
+                が成り立っている．ここで表現空間$V$の任意のベクトル$|v\rangle$は恒等的に
+                \[
+                    |v\rangle = P|v\rangle +(I-P)|v\ragle
+                \]
+                と書ける．このとき$(I-P)|v\rangle$全体の集合は$\mathrm{ker}P$である．
+                <detail class="collapsible">
+                    <summary>証明</summary>
+                    $(I-P)|v\rangle$全体の集合は$\mathrm{ker}P$であることを示す：
+                    \begin{align}
+                        P(I-P)|v\rangle=P|v\rangle-P^2|v\rangle
+                        \\
+                        =&P|v\rangle-P|v\rangle=0
+                    \end{align}
+                    ここで射影演算子の定義$P^2=P$を用いた．よって$(I-P)|v\rangle$全体の集合は$\mathrm{ker}P$である．
+                </detail>
+                ユニタリー表現$D$が作用しても内積はユニタリー性により保たれるため，$\mathrm{Im}P$だけでなく$\mathrm{Ker}P$も不変部分空間である．定義より$\mathrm{Im}P\cup\mathrm{ker}P=\{0\}$であるから適当な基底で$\mathrm{Im}P\perp\mathrm{ker}P$とできる．これは可約表現$D$を$\mathrm{ImP}$に作用する部分表現$D_1$と$\mathrm{kerP}$に作用する部分表現$D_2$に直和分解できることを意味する．この部分表現$D_1,D_2$に対し同様の議論を繰り返すことができ，表現は既約表現の直和分解される．したがって任意の表現は完全可約である．
+            </details>
             <hr>
             <h2 id="参考文献">参考文献</h2>
             <ul>
