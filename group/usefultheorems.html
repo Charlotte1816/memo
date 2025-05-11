@@ -67,16 +67,16 @@
                 <summary>証明</summary>
                 $D$を有限群$G$の任意の（行列）表現とする．やや天下り的ではあるが次の演算子を考える：
                 \[
-                    S=\sum_{g\in G}D(g)^{\dag}D(g)
+                    S=\sum_{g\in G}D(g)^{\dagger}D(g)
                 \]
-                このとき$S$は明らかにエルミート（$S^{\dag}=S$）である．また半正定値（$\langle v|Sv \rangle$）である．
+                このとき$S$は明らかにエルミート（$S^{\dagger}=S$）である．また半正定値（$\langle v|Sv \rangle$）である．
                 <details class="collapsible">
                     <summary>証明</summary>
                     $S$が半正定値であることを示す：エルミート行列の定義，内積の定義，ノルムの定義より，
                     \begin{align}
-                        \langle v|Sv \rangle =& \langle v|[\sum_{g\in G}D(g)^{\dag}D(g)]v \rangle
+                        \langle v|Sv \rangle =& \langle v|[\sum_{g\in G}D(g)^{\dagger}D(g)]v \rangle
                         \\
-                        =& \sum_{g\in G}\langle v|D(g)^{\dag}D(g)v \rangle
+                        =& \sum_{g\in G}\langle v|D(g)^{\dagger}D(g)v \rangle
                         \\
                         =& \sum_{g\in G}\langle D(g)v | D(g)v \rangle
                         \\
@@ -116,23 +116,23 @@
                     <summary>証明</summary>
                     $D'(g)$はユニタリー行列であることを示す：
                     \begin{align}
-                        D'(g)^{\dag}D'(g)=&[X^{-1}D(g)^{\dag}X][XD(g)X^{-1}]
+                        D'(g)^{\dagger}D'(g)=&[X^{-1}D(g)^{\dagger}X][XD(g)X^{-1}]
                         \\
-                        =&X^{-1}[D(g)^{\dag}SD(g)]X^{-1}
+                        =&X^{-1}[D(g)^{\dagger}SD(g)]X^{-1}
                     \end{align}
                     である．ここで
                     \begin{align}
-                        D(g)^{\dag}SD(g)=&D(g)^{\dag}[\sum_{h\in G}D(h)^{\dag}D(h)]D(g)
+                        D(g)^{\dagger}SD(g)=&D(g)^{\dagger}[\sum_{h\in G}D(h)^{\dagger}D(h)]D(g)
                         \\
-                        =&\sum_{h\in G}D(hg)^{\dag}D(hg)
+                        =&\sum_{h\in G}D(hg)^{\dagger}D(hg)
                         \\
-                        =&\sum_{g'\in G}D(g')^{\dag}D(g')
+                        =&\sum_{g'\in G}D(g')^{\dagger}D(g')
                         \\
                         =&S=X^2
                     \end{align}
                     となるので（途中で<a href="group_and_representation.html">組み換え定理</a>を用いた），
                     \[
-                        D'(g)^{\dag}D'(g)=X^{-1}X^2X^{-1}=I
+                        D'(g)^{\dagger}D'(g)=X^{-1}X^2X^{-1}=I
                     \]
                     したがって，$D'(g)$はユニタリー行列である．
                 </details>
