@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="ここでは，有限群に関する覚書をまとめている．">
+        <meta name="keywords" content="覚書, 物理学, 数学, 群論">
+        <meta name="author" content="Charlotte">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <title>有限群に関する基本的な定理</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="../stained_glass.png">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358732694127663"
+        crossorigin="anonymous"></script>
+        <script>
+            MathJax = {
+                tex: {
+                    tags: "none",
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <style>
+            .MathJax {
+                margin: 0 0.2em;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div class="container" id="top">
+            <div style="text-align: right;">
+                <img src="/logo.png" style="height: 5em;">
+            </div>
+            <h1>有限群に関する基本的な定理</h1>
+            <p>更新日: <script>document.write(new Date(document.lastModified).toLocaleDateString('ja-JP'));</script></p>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                </ul>
+                <ul>
+                    <li><a href="group.html">有限群</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#top">TOP</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <h2>概要</h2>
+            <p>有限群の任意の表現はユニタリー表現に同値であり，かつ完全可約である．この定理は有限群の理論を展開する上で基本的な役割を果たす．ここではこの定理を紹介し証明する．</p>
+            <hr>
+            <h2>目次</h2>
+            <ul>
+                <li><a href="#基本的な定理I">基本的な定理I</a></li>
+                <li><a href="#基本的な定理II">基本的な定理II</a></li>
+                <li><a href="#参考文献">参考文献</a></li>
+            </ul>
+            <hr>
+            <h2 id="基本的な定理I">基本的な定理I</h2>
+            <div class="dbox">
+                <div class="dbox-title">定理</div>
+                有限群の任意の表現はユニタリー表現に同値である．
+            </div>
+            <details class="collapsible">
+                <summary>証明</summary>
+                $D$を有限群$G$の任意の（行列）表現とする．やや天下り的ではあるが次の演算子を考える：
+                \[
+                    S=\sum_{g\in G}D(g)^{\dag}D(g)
+                \]
+                このとき$S$は明らかにエルミート（$S^{\dag}=S$）である．また半正定値（$\langle v|Sv \rangle$）である．
+                <details class="collapsible">
+                    <summary>証明</summary>
+                    $S$が半正定値であることを示す：エルミート行列の定義，内積の定義，ノルムの定義より，
+                    \begin{align}
+                        \langle v|Sv \rangle =& \langle v|[\sum_{g\in G}D(g)^{\dag}D(g)]v \rangle
+                        \\
+                        =& \sum_{g\in G}\langle v|D(g)^{\dag}D(g)v \rangle
+                        \\
+                        =& \sum_{g\in G}\langle D(g)v | D(g)v \rangle
+                        \\
+                        =& \sum_{g\in G}||D(g)|v\rangle||^2 \geq 0
+                    \end{align}
+                    よって$S$は半正定値である．
+                </details>
+                エルミート行列$S$はあるユニタリー行列$U$により常に対角化でき，固有値は実数である．また半正定値性より$S$の固有値は非負である．つまり，
+                \[
+                    S=U^{-1}dU
+                \]
+                ここで$d$は対角行列で
+                \[
+                    d=\mathrm{diag}(d_1,d_2,\ldots)
+                \]
+                （$d_j\geq0$ for $\forall j$）と書ける．しかし群の性質より，このとき任意の$j$について$d_j>0$である．
+                <details class="collapsible">
+                    <summary>証明</summary>
+                    任意の$j$について$d_j>0$であることを背理法で示す：ある$j$について$d_j=0$であると仮定する．そうすると$S|\lambda\rangle=0$となる固有ベクトル$|\lambda\rangle$がある．しかし
+                    \begin{align}
+                        \langle \lambda|S\lambda \rangle=&\sum_{g\in G}||D(g)|\lambda\rangle||^2
+                        \\
+                        =&0
+                    \end{align}
+                    となるのでノルムの定義より$D(g)|\lambda\rangle$は任意の$g$に対してゼロでなければならない．これは単位元の表現が$D(e)=1$でなければならないことに矛盾する．したがって任意の$j$について$d_j>0$である．
+                </details>
+                したがって，正則なエルミート行列
+                \begin{align}
+                    X=U^{-1}\mathrm{diag}(\sqrt{d_1},\sqrt{d_2},\ldots)U
+                \end{align}
+                が定義できる．この$X$で任意の$g\in G$に対する行列$D(g)$を異なる行列$D'(g)$に相似変換する：
+                \[
+                    D'(g)=XD(g)X^{-1}
+                \]
+                このとき$D'(g)$はユニタリー行列である．
+                <details class="collapsible">
+                    <summary>証明</summary>
+                    $D'(g)$はユニタリー行列であることを示す：
+                    \begin{align}
+                        D'(g)^{\dag}D'(g)=&[X^{-1}D(g)^{\dag}X][XD(g)X^{-1}]
+                        \\
+                        =&X^{-1}[D(g)^{\dag}SD(g)]X^{-1}
+                    \end{align}
+                    である．ここで
+                    \begin{align}
+                        D(g)^{\dag}SD(g)=&D(g)^{\dag}[\sum_{h\in G}D(h)^{\dag}D(h)]D(g)
+                        \\
+                        =&\sum_{h\in G}D(hg)^{\dag}D(hg)
+                        \\
+                        =&\sum_{g'\in G}D(g')^{\dag}D(g')
+                        \\
+                        =&S=X^2
+                    \end{align}
+                    となるので（途中で<a href="group_and_representation.html">組み換え定理</a>を用いた），
+                    \[
+                        D'(g)^{\dag}D'(g)=X^{-1}X^2X^{-1}=I
+                    \]
+                    したがって，$D'(g)$はユニタリー行列である．
+                </details>
+                このようにして有限群の任意の表現は常にユニタリー行列に相似変換できる．つまりユニタリー表現に同値である．
+            </details>
+            <hr>
+            <h2 id="基本的な定理II">基本的な定理II</h2>
+            <div class="dbox">
+                <div class="dbox-title">定理</div>
+                有限群の任意の表現は完全可約である．
+            </div>
+            <hr>
+            <h2 id="参考文献">参考文献</h2>
+            <ul>
+                <li>
+                    Howard Georgi. <em>Lie Algebras in Particle Physics: from Isospin to Unified Theories</em>. Westview Press, 1999. [<a href="https://www.amazon.com/s?k=Lie+Algebras+in+Particle+Physics" target="_blank">Amazon</a>]
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
