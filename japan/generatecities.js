@@ -230,6 +230,8 @@ const topTemplate = (pref) => `<!DOCTYPE html>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/stained_glass.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358732694127663"
+        crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container" id="top">
@@ -274,6 +276,8 @@ const cityTemplate = (prefName, city) => `<!DOCTYPE html>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/stained_glass.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358732694127663"
+        crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container" id="top">
