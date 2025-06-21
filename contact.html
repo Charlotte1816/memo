@@ -27,15 +27,17 @@
                 </nav>
             <hr>
             <p>当サイトへのお問い合わせは，以下のメールアドレス宛にお願いいたします．</p>
-            <ul>
-                <li>charlotte1816bronte@gmail.com</li>
-            </ul>
+            <p style="text-align: center;"></p>
+                charlotte1816bronte@gmail.com
+            </p>
             <p>※スパム対策のため，お手数ですが件名に「サイト名」をご記入ください．</p>
             <p>以下のフォームからもお問い合わせいただけます．</p>
             <form action="https://formspree.io/f/mrbkarkr" method="POST">
                 <div>
                     <label for="name">お名前:</label>
                     <input type="text" id="name" name="name" required>
+                </div>
+                <div>
                     <label for="email">メールアドレス:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
@@ -43,7 +45,7 @@
                     <label for="message">メッセージ:</label>
                 </div>
                 <div>
-                    <textarea id="message" name="message" rows="10" required></textarea>
+                    <textarea id="message" name="message" rows="5" cols="40" required></textarea>
                 </div>
                 <div>
                     <button type="submit">送信</button>
